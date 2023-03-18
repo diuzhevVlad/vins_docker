@@ -59,5 +59,7 @@ RUN cd ocv/opencv && mkdir build && cd build && \
 
 RUN cd ocv/opencv/build/doc/ && make -j7 && cd .. && make install
 
+RUN apt install tmux git -y
+
 WORKDIR /ws/
 
