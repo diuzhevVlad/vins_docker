@@ -60,6 +60,6 @@ RUN cd ocv/opencv && mkdir build && cd build && \
 RUN cd ocv/opencv/build/doc/ && make -j7 && cd .. && make install
 
 RUN apt install tmux git -y
-
+RUN apt-get install ros-melodic-realsense2-camera -y
 WORKDIR /ws/
 
