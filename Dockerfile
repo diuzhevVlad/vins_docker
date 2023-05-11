@@ -63,3 +63,6 @@ RUN apt install tmux git -y
 RUN apt-get install ros-melodic-realsense2-camera -y
 WORKDIR /ws/
 
+RUN apt install -y python3-pip && pip3 install numpy scipy
+RUN apt install -y python3-catkin-pkg-modules python3-rospkg-modules python3-empy
+RUN apt install nano

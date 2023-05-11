@@ -1,3 +1,5 @@
 ws/*
+# ws/src/optitrack_ros/*
 kalibr/
 .bag
+data/
