@@ -3,7 +3,7 @@
 #common parameters
 #support: 1 imu 1 cam; 1 imu 2 cam: 2 cam; 
 imu: 1        
-num_of_cam: 1
+num_of_cam: 2
 
 imu_topic: "/camera/imu"
 image0_topic: "/camera/infra1/image_rect_raw"
@@ -24,28 +24,19 @@ body_T_cam0: !!opencv-matrix
    rows: 4
    cols: 4
    dt: d
-   #data: [1, 0, 0, 0.0,
-   #        0, 1, 0, 0.0,
-   #        0, 0, 1, 0.0,
-   #        0, 0, 0, 1]
-
-   data:  [ 0.99998155 , 0.00280059 , 0.00539005 , 0.01028966,
-      -0.00282521 , 0.99998559 , 0.00456541 ,-0.00195239,
-      -0.00537719, -0.00458056 , 0.99997505, -0.00149654,
-      0.    ,      0.       ,   0.       ,   1.        ]
+   data: [ 0.99999596 , 0.00091479 , 0.00269018 , 0.00788429,
+      -0.00090823 , 0.99999661 ,-0.00243973 ,-0.00497711,
+      -0.0026924 ,  0.00243727 , 0.99999341 ,-0.0173313, 
+      0.  ,        0.   ,       0.   ,       1.        ]
 
 body_T_cam1: !!opencv-matrix
    rows: 4
    cols: 4
    dt: d
-   #data: [1, 0, 0, 0.0,
-   #        0, 1, 0, 0.0,
-   #        0, 0, 1, 0.0,
-   #        0, 0, 0, 1]
-   data:  [ 0.99998154 , 0.0028007  , 0.00539222  ,0.0102898 ,
-      -0.00282532 , 0.9999856 ,  0.00456346, -0.00195239,
-      -0.00537936 ,-0.00457861 , 0.99997505, -0.00149616,
-      0.   ,       0.    ,      0.     ,     1.        ]
+   data: [ 0.99999151 , 0.00126247 , 0.00392266 ,-0.04219177,
+      -0.00125442,  0.99999711, -0.00205176 ,-0.00495699,
+      -0.00392524 , 0.00204683 , 0.9999902 , -0.01705762,
+      0.  ,        0.   ,       0.  ,        1.        ]
 
 
 
@@ -54,7 +45,7 @@ body_T_cam1: !!opencv-matrix
 multiple_thread: 1
 
 #feature traker paprameters
-max_cnt: 200            # max feature number in feature tracking
+max_cnt: 150            # max feature number in feature tracking
 min_dist: 20            # min distance between two features 
 freq: 20                # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
 F_threshold: 1.0        # ransac threshold (pixel)
