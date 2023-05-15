@@ -3,3 +3,4 @@ ws/*
 kalibr/
 .bag
 data/
+start_noetic.sh
