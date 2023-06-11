@@ -12,3 +12,6 @@ Recomended config files for rs-435i camera are saved in this repository (inside 
 To obtain custom parameters of your imu-camera system use [Kalibr](https://github.com/ethz-asl/kalibr).
 ## Run
 Use commands.txt to launch VINS FUSION with realsense-435i camera
+
+##
+Use lalayants/vins dokcer image not to build it from scratch (Thanks to our contibutor @lalayants)
